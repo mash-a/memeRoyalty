@@ -1,9 +1,9 @@
 # React Single Repo Example
 
-This is an example repository to show how you could have an API and React client in the same repositories.
+This is an example repository to show how you could have an API and React client in the same repositories. It includes setup for knex.
 
 ## Installation
-
+1. `createdb mycoolapp` (you can change the name of the db in `knexfile.js`)
 1. `yarn && cd client && yarn`
 
 ## Local Development

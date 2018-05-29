@@ -13,15 +13,11 @@ class App extends Component {
   }
 
   render() {
-    const books = this.state.books.map ((book) => {
-      return <Book key={book.id} book={book} />;
-    });
     return (
       <div className="App">
-        <Header />
         {
           !this.state.loading &&
-          <p>You've connected to the server!</p> 
+          <h1>You've connected to the server!</h1>
         }
       </div>
     );
