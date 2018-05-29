@@ -1,0 +1,21 @@
+.App {
+}
+
+.App-header {
+  background-color: #CCC;
+  padding: 10px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-message {
+  font-weight: bold;
+}

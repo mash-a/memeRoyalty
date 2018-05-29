@@ -1,0 +1,23 @@
+{
+  "name": "react-single-repo-example",
+  "version": "1.0.0",
+  "scripts": {
+    "build-client": "cd ./client && yarn build",
+    "dev": "npm run serve-client & nodemon ./server/app.js",
+    "postinstall": "cd ./client && yarn",
+    "serve-client": "cd ./client && yarn start",
+    "start": "npm run build-client && node ./server/app.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "knex": "^0.14.6",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.7"
+  }
+}
