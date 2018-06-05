@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Header extends Component {
     render() {
         return <div>
-            <nav className="navbar navbar-dark bg-dark">
+            <nav className="navbar navbar-dark bg-primary">
                 <form className="form-inline my-2 my-lg-0">
                 <input className="form-control ml-sm-2" 
                     type="search" 
