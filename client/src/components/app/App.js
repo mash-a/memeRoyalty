@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Form from "../form/Form";
 import Images from "../imgs/Images";
+import UrlMeme from "../form/UrlMeme"
 
 class App extends Component {
   state = {
@@ -27,8 +28,9 @@ class App extends Component {
           !this.state.loading &&
           <h1>get yer memes ready</h1>
         }
-      <Form />
+      <UrlMeme />
       <Images memes={this.state.memes}/>
+      <Form />
       </div>
       <Footer />
       </div>
