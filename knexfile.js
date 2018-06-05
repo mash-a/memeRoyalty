@@ -1,9 +1,7 @@
-let connectionString = process.platform === 'win32' ? 'postgres://postgres:root@localhost/mycoolapp' : 'postgres://localhost/mycoolapp'
-
 module.exports = {
   development: {
       client: 'pg',
-      connection: connectionString,
+      connection: "postgres://masha:goddamit@localhost/memes",
       migrations: {
           directory: __dirname + '/db/migrations',
         },
@@ -13,7 +11,7 @@ module.exports = {
     },
   production: {
       client: 'pg',
-      connection: process.env.DATABASE_URL || 'postgres://postgres:root@localhost/mycoolapp',
+      connection: process.env.DATABASE_URL || "postgres://masha:goddamit@localhost/memes"   ,
       migrations: {
           directory: __dirname + '/db/migrations',
         },

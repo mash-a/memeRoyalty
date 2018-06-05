@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
+import Form from "../form/Form";
+import Images from "../imgs/Images";
 
 class App extends Component {
   state = {
     loading: true,
+    memes: []
   }
 
   componentWillMount = async () => {
-    const response = await fetch('/api/ping')
+    const response = await fetch('/api/memeges')
     const json = await response.json()
-    if (json.message) this.setState({ loading: false})
+    console.log(json);
+    if(json.memeges) this.setState({ loading: false, memes: json.memeges})
   }
 
   render() {
     return (
       <div className="App">
+      <Header />
+        <div className="container">
         {
           !this.state.loading &&
-          <h1>You've connected to the server!</h1>
+          <h1>get yer memes ready</h1>
         }
+      <Form />
+      <Images memes={this.state.memes}/>
+      </div>
+      <Footer />
       </div>
     );
   }
