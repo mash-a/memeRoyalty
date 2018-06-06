@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import './Image.css';
+import axios from 'axios';
 
 class Image extends Component {
     
     onDelete = (id) => {
-        
+       axios.delete(`/api/memeges/${id}`)
+       .then((result) => {
+           this.props.updateMemes(result.data)
+       }) 
     }
 
     render() {
@@ -16,7 +20,7 @@ class Image extends Component {
                 <p>tags: {tagString} | votes: {votes}</p>
                 <span className="glyphicon glyphicon-triangle-bottom Vote-Down"/>
                 <p onClick={() => this.props.editMeme(id)}>Edit</p>
-                <p>Delete</p>
+                <p onClick={() => this.onDelete(id)}>Delete</p>
             </div> 
         )
     }

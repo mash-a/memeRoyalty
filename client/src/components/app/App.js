@@ -3,7 +3,7 @@ import './App.css';
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Form from "../form/Form";
-import Images from "../imgs/Images";
+import Image from "../img/Image";
 import UrlMeme from "../form/UrlMeme";
 
 class App extends Component {
@@ -66,9 +66,15 @@ class App extends Component {
           !this.state.loading &&
           <h1>get yer memes ready</h1>
         }
-      <Images memes={this.state.memes}
-      editMeme={this.editMeme}
-      />
+
+      {
+        this.state.memes.map((meme) => (<Image 
+        key={meme.id} 
+        meme={meme} 
+        editMeme={this.editMeme}
+        updateMemes={this.updateMemes}
+        />))
+      }
       <Form />
       </div>
       <Footer />
