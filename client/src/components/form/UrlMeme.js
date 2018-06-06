@@ -5,7 +5,7 @@ class UrlMeme extends Component {
     static defaultProps = {votes: "0"}
     onSubmit = e => {
         e.preventDefault();
-        this.props.editing ? this.apiPatch() : this.apiPost()
+        this.props.editing ? this.props.apiPatch() : this.apiPost()
     }
    
     apiPost = () => {
@@ -17,18 +17,10 @@ class UrlMeme extends Component {
             })
     }
 
-    apiPatch = () => {
-        const {id, url, tagString, votes} = this.props.currentMeme
-        axios.patch(`/api/memeges/${id}`, {url, tagString, votes}) 
-        .then((result) => {
-            this.props.updateMemes(result.data)
-        })
-    }
-
     onChange = e => {this.props.updateMeme(e.target.name, e.target.value)}
 
     render() {
-        const {url, tagString, votes} = this.props.currentMeme
+        const {url, tagString} = this.props.currentMeme
         return (
             <div>
                 <form className="form" onSubmit={this.onSubmit}>
@@ -50,7 +42,9 @@ class UrlMeme extends Component {
                     onChange={this.onChange}
                     value={tagString}
                 />
-                <button className="btn btn-dark">Add Meme</button>
+                <button className="btn btn-dark">
+                {this.props.editing ? "Edit Meme" : "Add Meme"}
+                </button>
                 </form>
             </div>     
         )

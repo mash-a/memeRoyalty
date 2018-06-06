@@ -5,6 +5,7 @@ import Footer from "../footer/Footer";
 import Form from "../form/Form";
 import Image from "../img/Image";
 import UrlMeme from "../form/UrlMeme";
+import axios from "axios";
 
 class App extends Component {
   state = {
@@ -51,6 +52,29 @@ class App extends Component {
     this.setState({editing: true, currentMeme: meme})
   }
 
+  upVote = () => {
+    this.setState({currentMeme: {
+      ...this.state.currentMeme,
+      votes: this.state.currentMeme.votes + 1
+    }})
+  }
+
+  downVote = () => {
+    this.setState({currentMeme: {
+      ...this.state.currentMeme,
+      votes: this.state.currentMeme.votes - 1
+    }})
+  }
+
+  apiPatch = () => {
+    const {id, url, tagString, votes} = this.state.currentMeme
+    console.log(this.state.currentMeme)
+    axios.patch(`/api/memeges/${id}`, {url, tagString, votes}) 
+    .then((result) => {
+        this.updateMemes(result.data)
+    })
+}
+
   render() {
     return (
       <div className="App">
@@ -60,7 +84,7 @@ class App extends Component {
                updateMemes={this.updateMemes}
                updateMeme={this.updateMeme}
                editing={this.state.editing}
-
+               apiPatch={this.apiPatch}
                />
         {
           !this.state.loading &&
@@ -73,6 +97,11 @@ class App extends Component {
         meme={meme} 
         editMeme={this.editMeme}
         updateMemes={this.updateMemes}
+        updateMeme={this.updateMeme}
+        currentMeme={this.state.currentMeme}
+        upVote={this.upVote}
+        downVote={this.downVote}
+        apiPatch={this.apiPatch}
         />))
       }
       <Form />
