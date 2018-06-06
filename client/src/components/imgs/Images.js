@@ -7,7 +7,7 @@ class Images extends Component {
         const {memes} = this.props
         return (
             <div>
-                {memes.map(meme => (<Image key={meme.id} meme={meme}/>))}
+                {memes.map(meme => (<Image key={meme.id} meme={meme} editMeme={this.props.editMeme}/>))}
             </div>
         )
     }
