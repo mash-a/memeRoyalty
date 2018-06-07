@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './Header.css';
 class Header extends Component {
     render() {
-        return <div>
+        return <div className="container">
             <nav className="navbar navbar-dark bg-dark">
                 <form className="form-inline my-2 my-lg-0">
                 {/* <input className="form-control ml-sm-2" 
@@ -16,7 +16,7 @@ class Header extends Component {
                 </button> */}
                 </form>
                 <div className="navbar-header">
-                    <h3>memequeen</h3>
+                    <h3>MemeRoyalty</h3>
                 </div>
             </nav>
         </div>

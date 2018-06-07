@@ -1,6 +1,6 @@
 Problem -> 
 Too many memes?
-Stakes-> None? It's just a sudo clone
+Stakes-> 
 
 
 Solution -> 

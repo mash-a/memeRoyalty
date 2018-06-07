@@ -1,0 +1,6 @@
+.meme-royalty {
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

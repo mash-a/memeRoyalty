@@ -5,6 +5,7 @@ import Footer from "../footer/Footer";
 import Form from "../form/Form";
 import Image from "../img/Image";
 import UrlMeme from "../form/UrlMeme";
+import MemeRoyalty from "../MemeRoyalty/MemeRoyalty"
 import axios from "axios";
 
 class App extends Component {
@@ -80,6 +81,7 @@ class App extends Component {
     return (
       <div className="App">
       <Header />
+      <MemeRoyalty />
         <div className="container">
       <UrlMeme currentMeme={this.state.currentMeme} 
                updateMemes={this.updateMemes}
