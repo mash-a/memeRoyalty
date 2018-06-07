@@ -25,25 +25,33 @@ class Image extends Component {
     }
 
     render() {
-        const {id, url, tagString, votes} = this.props.meme;
+        const {id, url, tagString, votes, title} = this.props.meme;
         return (
-            <div className="card">
+            <div>
+            <Card>
                 <a href={url} target="_blank">
-                <img src={url} alt="" className="card-img-top"/>
+                <CardImg src={url} alt={id} top width="100%"/>
                 </a>
-                <div className="card-body">
+                <CardTitle>{title}</CardTitle>
+                <CardBody>
                 <i className="fas fa-caret-up"
                 id="Vote-Up"
                 onClick={(e) => this.vote(e, id)}
                 ></i>
-                <p>tags: {tagString} | votes: {votes}</p>
+                <small>votes: {votes} </small>
                 <i className="fas fa-caret-down"
                 id="Vote-Down"
                 onClick={(e) => this.vote(e, id)}
                 ></i>
-                <p onClick={() => this.props.editMeme(id)}>Edit</p>
-                <p onClick={() => this.onDelete(id)}>Delete</p>
-                </div>
+                <CardText>
+                <span onClick={() => this.props.editMeme(id)}>Edit</span>
+                <br />
+                <span onClick={() => this.onDelete(id)}>Delete</span>
+                <br />
+                <small>tags: {tagString} </small>
+                </CardText>
+                </CardBody>
+            </Card>
             </div> 
         )
     }

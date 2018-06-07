@@ -16,7 +16,8 @@ class App extends Component {
       id: null,
       url: "",
       tagString: "",
-      votes: ""
+      votes: "",
+      title: ""
     }
   }
 
@@ -34,7 +35,8 @@ class App extends Component {
         id: null,
         url: "",
         tagString: "",
-        votes: ""
+        votes: "",
+        title: "",
       }
     })
   }
@@ -67,8 +69,8 @@ class App extends Component {
   }
 
   apiPatch = () => {
-    const {id, url, tagString, votes} = this.state.currentMeme
-    axios.patch(`/api/memeges/${id}`, {url, tagString, votes}) 
+    const {id, url, tagString, votes, title} = this.state.currentMeme
+    axios.patch(`/api/memeges/${id}`, {url, tagString, votes, title}) 
     .then((result) => {
         this.updateMemes(result.data)
     })
@@ -103,7 +105,7 @@ class App extends Component {
         apiPatch={this.apiPatch}
         />))
       }
-      <Form />
+      {/* <Form /> */}
       </div>
       <Footer />
       </div>

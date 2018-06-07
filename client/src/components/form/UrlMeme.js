@@ -9,9 +9,9 @@ class UrlMeme extends Component {
     }
    
     apiPost = () => {
-        const {url, tagString} = this.props.currentMeme
+        const {title, url, tagString} = this.props.currentMeme
         const {votes} = UrlMeme.defaultProps;
-        axios.post('/api/memeges', {url, tagString, votes})
+        axios.post('/api/memeges', {title, url, tagString, votes})
             .then((result) => {
                 this.props.updateMemes(result.data)
             })
@@ -20,7 +20,7 @@ class UrlMeme extends Component {
     onChange = e => {this.props.updateMeme(e.target.name, e.target.value)}
 
     render() {
-        const {url, tagString} = this.props.currentMeme
+        const {title, url, tagString} = this.props.currentMeme
         return (
             <div className="sidenav">
                 <form className="form" onSubmit={this.onSubmit}>
@@ -32,6 +32,15 @@ class UrlMeme extends Component {
                     placeholder="Meme Url"
                     onChange={this.onChange}
                     value={url}
+                />
+                <input 
+                    required
+                    className="form-control"
+                    type="text"
+                    name="title"
+                    placeholder="Meme Title"
+                    onChange={this.onChange}
+                    value={title}
                 />
                 <input 
                     required
