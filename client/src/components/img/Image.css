@@ -1,0 +1,23 @@
+
+.card {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1em;
+    margin: .5em;
+    float: right;
+    overflow: scroll;
+  }
+  
+.Vote-Up {
+    color: red;
+    cursor: pointer;
+    float: left;
+  }
+  
+.Vote-Down {
+    padding: 1em;
+    color: black;
+    cursor: pointer;
+  }

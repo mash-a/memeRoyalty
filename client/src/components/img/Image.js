@@ -26,8 +26,11 @@ class Image extends Component {
     render() {
         const {id, url, tagString, votes} = this.props.meme;
         return (
-            <div>
-                <img src={url} alt="" className=""/>
+            <div className="card">
+                <a href={url} target="_blank">
+                <img src={url} alt="" className="card-img-top"/>
+                </a>
+                <div className="card-body">
                 <span className="glyphicon glyphicon-triangle-top Vote-Up"
                 id="Vote-Up"
                 onClick={(e) => this.vote(e, id)}
@@ -39,6 +42,7 @@ class Image extends Component {
                 />
                 <p onClick={() => this.props.editMeme(id)}>Edit</p>
                 <p onClick={() => this.onDelete(id)}>Delete</p>
+                </div>
             </div> 
         )
     }

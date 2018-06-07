@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
-
+import './UrlMeme.css'
 class UrlMeme extends Component {
     static defaultProps = {votes: "0"}
     onSubmit = e => {
@@ -22,7 +22,7 @@ class UrlMeme extends Component {
     render() {
         const {url, tagString} = this.props.currentMeme
         return (
-            <div>
+            <div className="sidenav">
                 <form className="form" onSubmit={this.onSubmit}>
                 <input 
                     required

@@ -4,8 +4,6 @@ import {Navbar} from 'reactstrap';
 const Footer = () => {
     return  <div>
                 <Navbar className="navbar fixed-bottom navbar-dark bg-dark"/>
-
-                
             </div>
 }
 
