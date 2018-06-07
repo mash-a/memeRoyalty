@@ -1,10 +1,11 @@
 import React from "react";
+import {Navbar} from 'reactstrap';
 
 const Footer = () => {
     return  <div>
-                <nav className="navbar fixed-bottom navbar-dark bg-dark">
+                <Navbar className="navbar fixed-bottom navbar-dark bg-dark"/>
 
-                </nav>
+                
             </div>
 }
 

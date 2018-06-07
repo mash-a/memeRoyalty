@@ -4,10 +4,6 @@ import axios from 'axios';
 
 class Image extends Component {
 
-    // onClick = () => {
-        
-    // }
-    
     onDelete = (id) => {
        axios.delete(`/api/memeges/${id}`)
        .then((result) => {
@@ -15,6 +11,11 @@ class Image extends Component {
        }) 
     }
 
+    //e.persist() basically forces the event target to stay there
+    //and await for the async functionality
+    //needed the async function so that the function would wait 
+    //for the state to be updated and then to take that information
+    //to do the apiPatch()
     vote = async (e, id) => {
         e.persist();
         await this.props.editMeme(id);
@@ -22,20 +23,11 @@ class Image extends Component {
         this.props.apiPatch();
     }
 
-    // votePatch = (id) => {
-    //     const {votes} = this.props.currentMeme;
-    //     axios.patch(`/api/memeges/${id}`, {votes})
-    //     .then((result) => {
-    //         console.log(result.data)
-    //         this.props.updateMemes(result.data)
-    //     })
-    // }
-
     render() {
         const {id, url, tagString, votes} = this.props.meme;
         return (
             <div>
-                <img src={url} alt="" className="img-responsive"/>
+                <img src={url} alt="" className=""/>
                 <span className="glyphicon glyphicon-triangle-top Vote-Up"
                 id="Vote-Up"
                 onClick={(e) => this.vote(e, id)}

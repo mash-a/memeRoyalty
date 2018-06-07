@@ -6,6 +6,20 @@ import Form from "../form/Form";
 import Image from "../img/Image";
 import UrlMeme from "../form/UrlMeme";
 import axios from "axios";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+  Row,
+  Col,
+  Jumbotron,
+  Button
+} from 'reactstrap';
 
 class App extends Component {
   state = {
