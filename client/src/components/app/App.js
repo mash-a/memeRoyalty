@@ -68,7 +68,6 @@ class App extends Component {
 
   apiPatch = () => {
     const {id, url, tagString, votes} = this.state.currentMeme
-    console.log(this.state.currentMeme)
     axios.patch(`/api/memeges/${id}`, {url, tagString, votes}) 
     .then((result) => {
         this.updateMemes(result.data)

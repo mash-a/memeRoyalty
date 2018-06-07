@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Image.css';
 import axios from 'axios';
+import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 
 class Image extends Component {
 
@@ -31,15 +32,15 @@ class Image extends Component {
                 <img src={url} alt="" className="card-img-top"/>
                 </a>
                 <div className="card-body">
-                <span className="glyphicon glyphicon-triangle-top Vote-Up"
+                <i className="fas fa-caret-up"
                 id="Vote-Up"
                 onClick={(e) => this.vote(e, id)}
-                />
+                ></i>
                 <p>tags: {tagString} | votes: {votes}</p>
-                <span className="glyphicon glyphicon-triangle-bottom Vote-Down"
+                <i className="fas fa-caret-down"
                 id="Vote-Down"
                 onClick={(e) => this.vote(e, id)}
-                />
+                ></i>
                 <p onClick={() => this.props.editMeme(id)}>Edit</p>
                 <p onClick={() => this.onDelete(id)}>Delete</p>
                 </div>

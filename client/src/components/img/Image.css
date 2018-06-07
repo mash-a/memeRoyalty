@@ -10,13 +10,13 @@
     overflow: scroll;
   }
   
-.Vote-Up {
+#Vote-Up {
     color: red;
     cursor: pointer;
     float: left;
   }
   
-.Vote-Down {
+#Vote-Down {
     padding: 1em;
     color: black;
     cursor: pointer;
