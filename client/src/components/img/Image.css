@@ -7,7 +7,7 @@
     padding: 1em;
     margin: .5em;
     float: left;
-    overflow: scroll;
+    /* overflow: scroll; */
     color: #C5C6C7;
     /* border-color: #45A29E; */
     font-family: 'Dosis', sans-serif;
