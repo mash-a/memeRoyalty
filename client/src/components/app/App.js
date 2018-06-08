@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import Form from "../form/Form";
 import Image from "../img/Image";
 import UrlMeme from "../form/UrlMeme";
 import MemeRoyalty from "../MemeRoyalty/MemeRoyalty"
@@ -82,18 +81,12 @@ class App extends Component {
       <div className="App">
       <Header />
       <MemeRoyalty />
-        <div className="container">
-      <UrlMeme currentMeme={this.state.currentMeme} 
-               updateMemes={this.updateMemes}
-               updateMeme={this.updateMeme}
-               editing={this.state.editing}
-               apiPatch={this.apiPatch}
-               />
-        {
-          !this.state.loading &&
-          <h1>get yer memes ready</h1>
+      <div className="container">
+      {
+          !this.state.loading
         }
-
+      <div className="container">
+      <div className="row">
       {
         this.state.memes.map((meme) => (<Image 
         key={meme.id} 
@@ -107,7 +100,18 @@ class App extends Component {
         apiPatch={this.apiPatch}
         />))
       }
-      {/* <Form /> */}
+      </div>
+      </div>
+      <div className="container">
+      <div className="row justify-content-center">
+      <UrlMeme currentMeme={this.state.currentMeme} 
+               updateMemes={this.updateMemes}
+               updateMeme={this.updateMeme}
+               editing={this.state.editing}
+               apiPatch={this.apiPatch}
+               />
+      </div>
+      </div>
       </div>
       <Footer />
       </div>

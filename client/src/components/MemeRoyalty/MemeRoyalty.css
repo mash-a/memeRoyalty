@@ -1,6 +1,8 @@
 .meme-royalty {
-    height: 1000px;
+    height: 500px;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    background-image: url("https://media2.giphy.com/media/URZcG7uLd9h4s/200w.gif");
+    font-family: 'Press Start 2P', cursive;
 }

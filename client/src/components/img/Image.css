@@ -1,13 +1,16 @@
 
 .card {
     width: 350px;
-    height: 600px;
-    /* border: 1px solid black; */
+    height: 500px;
+    background-color: #1F2833;
     border-radius: 5px;
     padding: 1em;
     margin: .5em;
     float: left;
     overflow: scroll;
+    color: #C5C6C7;
+    border-color: #45A29E;
+    font-family: 'Dosis', sans-serif;
   }
   
 #Vote-Up {

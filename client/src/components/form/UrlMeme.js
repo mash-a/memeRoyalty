@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import './UrlMeme.css'
+import { Card, CardBody} from 'reactstrap';
 class UrlMeme extends Component {
     static defaultProps = {votes: "0"}
     onSubmit = e => {
@@ -22,7 +23,8 @@ class UrlMeme extends Component {
     render() {
         const {title, url, tagString} = this.props.currentMeme
         return (
-            <div className="sidenav">
+            <Card id="form">
+            <CardBody>
                 <form className="form" onSubmit={this.onSubmit}>
                 <input 
                     // required
@@ -55,7 +57,8 @@ class UrlMeme extends Component {
                 {this.props.editing ? "Edit Meme" : "Add Meme"}
                 </button>
                 </form>
-            </div>     
+            </CardBody>
+            </Card>     
         )
     }
         

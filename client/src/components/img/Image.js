@@ -29,16 +29,16 @@ class Image extends Component {
         return (
             <div>
             <Card>
+                <CardTitle>{title}</CardTitle>
                 <a href={url} target="_blank">
                 <CardImg src={url} alt={id} top width="100%"/>
                 </a>
-                <CardTitle>{title}</CardTitle>
                 <CardBody>
                 <i className="fas fa-caret-up"
                 id="Vote-Up"
                 onClick={(e) => this.vote(e, id)}
                 ></i>
-                <small>votes: {votes} </small>
+                <small>{votes} </small>
                 <i className="fas fa-caret-down"
                 id="Vote-Down"
                 onClick={(e) => this.vote(e, id)}
