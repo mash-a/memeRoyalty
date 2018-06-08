@@ -15,14 +15,14 @@
   }
   
 #Vote-Up {
-    color: red;
+    color: #45A29E;
     cursor: pointer;
     float: left;
   }
   
 #Vote-Down {
     padding: 1em;
-    color: red;
+    color: #45A29E;
     cursor: pointer;
   }
 

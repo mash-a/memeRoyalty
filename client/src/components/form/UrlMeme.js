@@ -56,6 +56,13 @@ class UrlMeme extends Component {
                 <button className="btn btn-dark">
                 {this.props.editing ? "Edit Meme" : "Add Meme"}
                 </button>
+               {
+                   this.props.editing &&
+                   <button className="btn btn-dark" 
+                   value="cancel"
+                   onClick={this.props.stopEdit}
+                   >Nevah Mind</button>
+               }
                 </form>
             </CardBody>
             </Card>     

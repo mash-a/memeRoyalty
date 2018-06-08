@@ -36,7 +36,7 @@ class App extends Component {
         url: "",
         tagString: "",
         votes: "",
-        title: "",
+        title: ""
       }
     })
   }
@@ -76,6 +76,18 @@ class App extends Component {
     })
 }
 
+stopEdit = () => {
+  this.setState({editing: false,
+  currentMeme: {
+        id: null,
+        url: "",
+        tagString: "",
+        votes: "",
+        title: ""
+  }
+  })
+}
+
   render() {
     return (
       <div className="App">
@@ -109,6 +121,7 @@ class App extends Component {
                updateMeme={this.updateMeme}
                editing={this.state.editing}
                apiPatch={this.apiPatch}
+               stopEdit={this.stopEdit}
                />
       </div>
       </div>
