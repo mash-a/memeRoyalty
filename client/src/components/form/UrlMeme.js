@@ -27,7 +27,7 @@ class UrlMeme extends Component {
             <CardBody>
                 <form className="form" onSubmit={this.onSubmit}>
                 <input 
-                    // required
+                    required
                     className="form-control"
                     type="text"
                     name="url"
@@ -36,7 +36,7 @@ class UrlMeme extends Component {
                     value={url}
                 />
                 <input 
-                    // required
+                    required
                     className="form-control"
                     type="text"
                     name="title"
@@ -45,7 +45,7 @@ class UrlMeme extends Component {
                     value={title}
                 />
                 <input 
-                    // required
+                    required
                     className="form-control"
                     type="text"
                     name="tagString"

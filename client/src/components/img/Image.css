@@ -1,7 +1,7 @@
 
 .card {
     width: 350px;
-    height: 500px;
+    height: auto;
     background-color: #1F2833;
     border-radius: 5px;
     padding: 1em;
@@ -9,8 +9,9 @@
     float: left;
     overflow: scroll;
     color: #C5C6C7;
-    border-color: #45A29E;
+    /* border-color: #45A29E; */
     font-family: 'Dosis', sans-serif;
+    border-image: url("https://media2.giphy.com/media/URZcG7uLd9h4s/200w.gif") 25% repeat;
   }
   
 #Vote-Up {
