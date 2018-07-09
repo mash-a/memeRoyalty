@@ -40,6 +40,10 @@ $ knex seed:run
 * [Node.js](https://nodejs.org/) - JavaScript runtime
 
 
+## Author
+
+* **Mariya Mego Vela** - [github.com/mash-a](https://github.com/mash-a)
+
 ## Acknowledgements
 
 [Brian Fountain](https://github.com/Fountain/g79wd-react-express-template)
