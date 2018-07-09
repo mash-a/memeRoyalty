@@ -8,32 +8,38 @@ Clone the repo down and play with the code!
 
 ### Prerequisites
 
-npm
-yarn
-git
-react
-postgres
+* npm
+* yarn
+* git
+* react
+* postgres
 
 ### Installing 
 
 ```
+$ cd memeRoyalty
 $ npm install 
-$ yarn install 
+$ cd memeRoyalty/client
+$ yarn install
+$ cd ..
+$ knex migrate:latest 
+$ knex seed:run
+
 ```
 
 
 ## Built With
 
 
-* [React](https://reactjs.org/)
-* [Express](https://expressjs.com/)
-* [PostgreSql](https://www.postgresql.org/)
-* [Knex.js](https://knexjs.org/)
-* [Bootstrap 4](https://getbootstrap.com/)
-* [Axios](https://github.com/axios/axios)
+* [React](https://reactjs.org/) - UI library
+* [Express](https://expressjs.com/) - Web framework for Node.js
+* [PostgreSql](https://www.postgresql.org/) - Object-relational database
+* [Knex.js](https://knexjs.org/) - SQL query builder
+* [Bootstrap 4](https://getbootstrap.com/) - Front-end web framework
+* [Axios](https://github.com/axios/axios) - Promise based HTTP client
+* [Node.js](https://nodejs.org/) - JavaScript runtime
 
 
 ## Acknowledgements
 
-Brian Fountain 
-https://github.com/Fountain/g79wd-react-express-template
+[Brian Fountain](https://github.com/Fountain/g79wd-react-express-template)
