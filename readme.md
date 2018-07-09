@@ -20,12 +20,26 @@ npm install
 yarn install
 
 ## Built With
+
+
 https://reactjs.org/
+
+
 https://expressjs.com/
+
+
 https://www.postgresql.org/
+
+
 https://knexjs.org/
+
+
 https://getbootstrap.com/
+
+
 https://github.com/axios/axios
+
+
 
 ## Acknowledgements
 
