@@ -1,16 +1,33 @@
-Problem -> 
-Too many memes?
-Stakes-> 
+# Meme Royalty
 
+An application to store memes and vote on your favorite ones
 
-Solution -> 
-This is a great platform to share memes with friends and collect them because who doens't love a good, daily meme
+## Getting Started
 
-Name: MemeRoyalty  
-Description: 
+Clone the repo down and play with the code!
 
-Features ->
-core feature: can vote on memes and they will be sorted with the highest being at the top
+### Prerequisites
 
-can add new memes from urls
-and then edit their titles and tags
+npm
+yarn
+git
+react
+postgres
+
+### Installing 
+
+npm install
+yarn install
+
+## Built With
+https://reactjs.org/
+https://expressjs.com/
+https://www.postgresql.org/
+https://knexjs.org/
+https://getbootstrap.com/
+https://github.com/axios/axios
+
+## Acknowledgements
+
+Brian Fountain 
+https://github.com/Fountain/g79wd-react-express-template
